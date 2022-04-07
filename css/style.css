@@ -1,0 +1,287 @@
+.container {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+/************************ header ********************/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/splash.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 450px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 10px;
+  color: white;
+  margin: 20px 20px 0 0;
+}
+
+nav img {
+  width: 60px;
+  height: 60px;
+  margin: 20px 0 0 20px;
+}
+
+h1,
+h2 {
+  font-family: "Mandali", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 80px;
+  margin-bottom: 0;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6e8e9b;
+}
+
+/*************** section concept **************/
+h3 {
+  font-family: "Mandali", sans-serif;
+  margin-top: 40px;
+  font-size: 25px;
+  color: #6e8e9b;
+}
+
+h3::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 50px;
+  border: 1px solid #6e8e9b;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.concept-flex {
+  display: flex;
+  align-items: center;
+  /*flex-direction: row-reverse;*/
+  margin-bottom: 30px;
+}
+
+.concept-flex img {
+  width: 60px;
+  height: 60px;
+  margin: 20px 20px 0 0;
+  border: 0px solid;
+  border-radius: 30px;
+}
+
+.concept-flex div {
+  margin-right: 20px;
+}
+
+#image-reverse {
+  flex-direction: row;
+}
+
+.circle {
+  border: 0px solid;
+  padding: 0 0 0 20px;
+  border-radius: 200px;
+  height: 100px;
+  margin: 20px 20px 0 20px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+/*************** section cours **************/
+#cours {
+  margin-bottom: 40px;
+}
+
+#cours article {
+  display: flex;
+  align-items: center;
+}
+
+#cours img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* ces 2 lignes pour centrer l'image dans son conteneur */
+  object-position: 75%;
+}
+
+#cours article div {
+  display: block;
+  margin-left: 60px;
+}
+
+/****************** contact ******************/
+/* style de la partie html commentée (mock-up)
+
+#rappel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#rappel a {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+#contact :nth-child(5) {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.btn2 {
+  display: block;
+  width: 500px;
+  margin: 10px 0 40px 0;
+  background-color: white;
+  color: lightgray;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+*/
+
+#contact form ul li:nth-child(2),
+#contact form ul li:nth-child(3),
+#contact form ul li:nth-child(4),
+#contact form ul li:nth-child(5),
+#contact form ul li:nth-child(6),
+#contact form ul li:nth-child(7),
+#contact form ul li:nth-child(9),
+#contact form ul li:nth-child(11) {
+  margin-top: 30px;
+}
+
+#contact form .input {
+  width: 100%;
+  max-width: 400px;
+  box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 10px 15px;
+  border: none;
+}
+
+#contact form input:checked + label {
+  color: white;
+  background-color: #6e8e9b;
+}
+
+#contact form input[type="radio"] {
+  display: none;
+}
+
+/*#contact form label.btn {
+  margin-left: 20px;
+}*/
+
+/******************* footer ******************/
+footer {
+  background-color: #6e8e9b;
+  color: white;
+  text-align: center;
+  padding: 4px 0;
+  margin-bottom: 20px;
+}
+
+/***************** media queries *************/
+@media (min-width: 768px) and (max-width: 990px) {
+  /* pas besoin du min-width vu que l'on fait le mobile juste après ? */
+  .concept-flex {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .concept-flex {
+    flex-direction: column;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .concept-flex div {
+    text-align: center;
+  }
+
+  #image-reverse {
+    flex-direction: column;
+  }
+
+  #cours article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #cours article div {
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin-top: 60px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* vieux mobiles, mais réso encore très courante selon moi */
+@media (max-width: 500px) {
+  #contact form label.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
